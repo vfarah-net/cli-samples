@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNet.Hosting;
 
-namespace HelloWebFullAppDomainPrototype
+namespace HelloWebFullAppDomainManagerPrototype
 {
     public class Program
     {
@@ -14,15 +14,10 @@ namespace HelloWebFullAppDomainPrototype
             // In the other samples, the application base points to where the ".exe" is located. This is problematic
             // at development time because it means static files, views and configuration files need to be copied (via compile)
             // before running.
-
-            // The side effects are that anything above the call to ExecuteInChildAppDomain will be executed twice
-            // on .NET Framework and Mono.
 #if NET451
             Console.WriteLine($"AppDomain.Id = {AppDomain.CurrentDomain.Id}");
             Console.WriteLine($"AppDomain.FriendlyName = {AppDomain.CurrentDomain.FriendlyName}");
             Console.WriteLine($"AppDomain.BaseDirectory = {AppDomain.CurrentDomain.BaseDirectory}");
-
-            WebHost.ExecuteInChildAppDomain(args);
 #endif
             // The real application logic goes here
             WebApplication.Run(args);
