@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -59,6 +60,12 @@ namespace DynamicReloader
             }
 
             return null;
+        }
+        
+        protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)
+        {
+            System.Console.WriteLine($"LoadUnmanagedDll({unmanagedDllName})");
+            return base.LoadUnmanagedDll(unmanagedDllName);
         }
     }
 

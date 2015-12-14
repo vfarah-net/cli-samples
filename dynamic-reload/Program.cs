@@ -36,11 +36,6 @@ namespace DynamicReloader
             var assemblies = new Dictionary<AssemblyName, string>(AssemblyNameComparer.OrdinalIgnoreCase);
             var dllImports = new Dictionary<string, string>();
 
-            var dotnetHome = Environment.GetEnvironmentVariable("DOTNET_HOME");
-            Console.WriteLine($"DOTNET_HOME: {dotnetHome}");
-
-            var runtimePath = Path.Combine(dotnetHome, "runtime", "coreclr");
-
             foreach (var export in exporter.GetAllExports())
             {
                 if (export.Library is ProjectDescription)
@@ -53,13 +48,6 @@ namespace DynamicReloader
                 {
                     var assemblyName = new AssemblyName(asset.Name);
                     assemblies[assemblyName] = asset.ResolvedPath;
-
-                    var runtimeDllPath = Path.Combine(runtimePath, asset.Name + ".dll");
-
-                    if (File.Exists(runtimeDllPath))
-                    {
-                        assemblies[assemblyName] = runtimeDllPath;
-                    }
                 }
 
                 foreach (var asset in export.NativeLibraries)
