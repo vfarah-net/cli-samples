@@ -18,6 +18,7 @@ namespace HelloWebFullAppDomainManagerPrototype
             Console.WriteLine($"AppDomain.Id = {AppDomain.CurrentDomain.Id}");
             Console.WriteLine($"AppDomain.FriendlyName = {AppDomain.CurrentDomain.FriendlyName}");
             Console.WriteLine($"AppDomain.BaseDirectory = {AppDomain.CurrentDomain.BaseDirectory}");
+            Console.WriteLine($"AppDomain.PrivateBinPath = {AppDomain.CurrentDomain.SetupInformation.PrivateBinPath}");
 #endif
             // The real application logic goes here
             WebApplication.Run(args);
