@@ -17,7 +17,7 @@ namespace Microsoft.AspNet.Hosting
                 Environment.Exit(exitCode);
             }
         }
-        
+
         public static void ExecuteCallbackInChildAppDomain(string[] args, CrossAppDomainDelegate callback)
         {
             var domain = CreateDomain(args);
@@ -46,7 +46,7 @@ namespace Microsoft.AspNet.Hosting
                     ApplicationBase = applicationBasePath,
 
                     // Path to where the assemblies are
-                    PrivateBinPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)
+                    PrivateBinPath = Path.GetDirectoryName(typeof(WebHost).Assembly.Location)
                 };
 
                 // Create a child domain and execute main again
