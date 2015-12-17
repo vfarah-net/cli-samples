@@ -56,11 +56,30 @@ namespace DynamicReloader
                 }
             }
 
-            var loadContext = new DynamicLoadContext(workspace, projects, assemblies, dllImports);
+            var loadContext = new DynamicLoadContext(workspace, projects, dllImports);
 
-            var assembly = loadContext.LoadFromAssemblyName(new AssemblyName("System.Runtime"));
+            // We need to force load all assemblies in the load context since we don't want
+            // things to transitively fall back to the default load context
+            foreach (var asm in assemblies)
+            {
+                try
+                {
+                    // Force load the assemblies
+                    loadContext.LoadFile(asm.Value);
+                }
+                catch
+                {
+                    // It's in the TPA list
+                    Console.WriteLine($"Failed to load assembly {asm.Key}. It's in the TPA list");
+                }
+            }
 
-            Console.WriteLine(assembly);
+            var assembly = loadContext.LoadFromAssemblyName(new AssemblyName(compileTimeContext.ProjectFile.Name));
+
+            if (assembly.EntryPoint != null)
+            {
+                assembly.EntryPoint.Invoke(null, new object[] { args.Skip(1).ToArray() });
+            }
         }
     }
 }
