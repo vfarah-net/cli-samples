@@ -6,7 +6,12 @@ namespace HelloWeb
     {
 		public static void Main(string[] args)
 		{
-			WebApplication.Run<Startup>(args);
+			var application = new WebApplicationBuilder()
+                        .UseConfiguration(WebApplicationConfiguration.GetDefault(args))
+                        .UseStartup<Startup>()
+                        .Build();
+
+            application.Run();
 		}	
 	}
 }

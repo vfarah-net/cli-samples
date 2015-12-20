@@ -21,7 +21,12 @@ namespace HelloWebFullAppDomainManagerPrototype
             Console.WriteLine($"AppDomain.PrivateBinPath = {AppDomain.CurrentDomain.SetupInformation.PrivateBinPath}");
 #endif
             // The real application logic goes here
-            WebApplication.Run(args);
+            var application = new WebApplicationBuilder()
+                        .UseConfiguration(WebApplicationConfiguration.GetDefault(args))
+                        .UseStartup<Startup>()
+                        .Build();
+
+            application.Run();
         }
     }
 }
