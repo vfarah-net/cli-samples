@@ -26,9 +26,7 @@ namespace HelloMvc
             {
                 // Compose with the previous options
                 previous(c);
-                
-                System.Console.WriteLine();
-                
+
                 var refs = ResolveCompilationReferences(appEnvironment);
 
                 c.Compilation = c.Compilation
