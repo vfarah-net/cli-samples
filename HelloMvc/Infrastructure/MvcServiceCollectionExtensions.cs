@@ -11,7 +11,7 @@ namespace HelloMvc
     {
         /// Override the default AddMvc since we need to do some fix up for the CLI
         // This is temporary as more things come online
-        public static IMvcBuilder AddMvc(this IServiceCollection services)
+        public static IMvcBuilder AddMvc2(this IServiceCollection services)
         {
             // We need to disable register an empty exporter so that we can add references
             // https://github.com/aspnet/Mvc/issues/3633
