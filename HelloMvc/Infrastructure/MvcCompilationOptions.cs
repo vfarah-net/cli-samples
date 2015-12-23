@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.AspNet.Mvc.Razor;
 using Microsoft.CodeAnalysis;
-using Microsoft.Extensions.OptionsModel;
+using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
 
 namespace HelloMvc
