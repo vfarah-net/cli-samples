@@ -20,9 +20,11 @@ namespace HelloWebFullAppDomainManagerPrototype
             Console.WriteLine($"AppDomain.BaseDirectory = {AppDomain.CurrentDomain.BaseDirectory}");
             Console.WriteLine($"AppDomain.PrivateBinPath = {AppDomain.CurrentDomain.SetupInformation.PrivateBinPath}");
 #endif
+            var configuration = WebApplicationConfiguration.GetDefault(args);
+            
             // The real application logic goes here
             var application = new WebApplicationBuilder()
-                        .UseConfiguration(WebApplicationConfiguration.GetDefault(args))
+                        .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
 

@@ -25,9 +25,11 @@ namespace HelloWebFullAppDomainPrototype
 
             WebHost.ExecuteInChildAppDomain(args);
 #endif
+            var configuration = WebApplicationConfiguration.GetDefault(args);
+
             // The real application logic goes here
             var application = new WebApplicationBuilder()
-                        .UseConfiguration(WebApplicationConfiguration.GetDefault(args))
+                        .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
 

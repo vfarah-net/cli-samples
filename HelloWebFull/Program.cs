@@ -6,8 +6,10 @@ namespace HelloWeb
     {
 		public static void Main(string[] args)
 		{
-			var application = new WebApplicationBuilder()
-                        .UseConfiguration(WebApplicationConfiguration.GetDefault(args))
+            var configuration = WebApplicationConfiguration.GetDefault(args);
+            
+            var application = new WebApplicationBuilder()
+                        .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
 
