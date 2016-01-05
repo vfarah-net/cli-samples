@@ -1,3 +1,4 @@
+using System.IO;
 using Microsoft.AspNet.Hosting;
 
 namespace HelloWeb
@@ -9,6 +10,7 @@ namespace HelloWeb
             var configuration = WebApplicationConfiguration.GetDefault(args);
 
             var application = new WebApplicationBuilder()
+                        .UseApplicationBasePath(Directory.GetCurrentDirectory())
                         .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
