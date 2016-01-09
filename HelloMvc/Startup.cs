@@ -8,7 +8,7 @@ namespace HelloMvc
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc2();
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
