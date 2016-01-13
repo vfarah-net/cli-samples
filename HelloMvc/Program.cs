@@ -10,6 +10,7 @@ namespace HelloMvc
             var configuration = WebApplicationConfiguration.GetDefault(args);
 
             var application = new WebApplicationBuilder()
+                        .UseServer("Microsoft.AspNet.Server.Kestrel")
                         .UseApplicationBasePath(Directory.GetCurrentDirectory())
                         .UseConfiguration(configuration)
                         .UseStartup<Startup>()

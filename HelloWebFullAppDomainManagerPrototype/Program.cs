@@ -24,6 +24,7 @@ namespace HelloWebFullAppDomainManagerPrototype
             
             // The real application logic goes here
             var application = new WebApplicationBuilder()
+                        .UseServer("Microsoft.AspNet.Server.Kestrel")
                         .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
