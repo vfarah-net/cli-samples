@@ -2,9 +2,9 @@ using Microsoft.AspNet.Mvc;
 
 namespace HelloMvc
 {
-    public class HomeController
+    public class HomeController : Controller
     {
         [HttpGet("/")]
-        public IActionResult Index() => new ViewResult();
+        public IActionResult Index() => View();
     }
 }
