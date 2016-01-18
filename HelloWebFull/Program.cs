@@ -6,17 +6,15 @@ namespace HelloWeb
     public class Program
     {
         public static void Main(string[] args)
-        {
-            var configuration = WebApplicationConfiguration.GetDefault(args);
-            
-            var application = new WebApplicationBuilder()
+        {            
+            var host = new WebHostBuilder()
+                        .UseDefaultConfiguration(args)
                         .UseServer("Microsoft.AspNet.Server.Kestrel")
                         .UseApplicationBasePath(Directory.GetCurrentDirectory())
-                        .UseConfiguration(configuration)
                         .UseStartup<Startup>()
                         .Build();
 
-            application.Run();
+            host.Run();
         }    
     }
 }
