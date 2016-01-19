@@ -1,5 +1,8 @@
 {
     "version": "1.0.1-*",
+    "content": [
+        "Views"
+    ],
     "compilationOptions": {
         "preserveCompilationContext": true,
         "emitEntryPoint": true
