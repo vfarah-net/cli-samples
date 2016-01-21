@@ -8,9 +8,10 @@ namespace HelloWeb
         public static void Main(string[] args)
         {            
             var host = new WebHostBuilder()
-                        .UseDefaultConfiguration(args)
                         .UseServer("Microsoft.AspNet.Server.Kestrel")
                         .UseApplicationBasePath(Directory.GetCurrentDirectory())
+                        .UseDefaultConfiguration(args)
+                        .UseIISPlatformHandlerUrl()
                         .UseStartup<Startup>()
                         .Build();
 

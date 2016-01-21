@@ -1,5 +1,6 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.HttpOverrides;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -15,6 +16,12 @@ namespace HelloMvc
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Debug);
+
+            app.UseIISPlatformHandler();
+            app.UseOverrideHeaders(new OverrideHeaderOptions
+            {
+                ForwardedOptions = ForwardedHeaders.All
+            });
 
             app.UseStaticFiles();
 

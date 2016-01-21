@@ -1,5 +1,6 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
+using Microsoft.AspNet.HttpOverrides;
 
 namespace HelloWeb
 {
@@ -7,6 +8,12 @@ namespace HelloWeb
     {
         public void Configure(IApplicationBuilder app)
         {
+            app.UseIISPlatformHandler();
+            app.UseOverrideHeaders(new OverrideHeaderOptions
+            {
+                ForwardedOptions = ForwardedHeaders.All
+            });
+            
             app.Run(context =>
             {
                 return context.Response.WriteAsync($"Hello World!");
