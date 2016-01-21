@@ -1,5 +1,6 @@
 {
     "content": [
+        "wwwroot",
         "Views"
     ],
     "compilationOptions": {
@@ -10,6 +11,7 @@
         "NETStandard.Library": "1.0.0-rc2-23616",
         "Microsoft.Extensions.Logging.Console": "1.0.0-*",
         "Microsoft.AspNet.Mvc": "6.0.0-*",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-*",
         "Microsoft.AspNet.Diagnostics": "1.0.0-*",
         "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
         "System.Runtime.Serialization.Primitives": "4.1.0-*"
