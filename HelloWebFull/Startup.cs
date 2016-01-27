@@ -1,6 +1,6 @@
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Http;
-using Microsoft.AspNet.HttpOverrides;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace HelloWeb
 {
@@ -9,9 +9,9 @@ namespace HelloWeb
         public void Configure(IApplicationBuilder app)
         {
             app.UseIISPlatformHandler();
-            app.UseOverrideHeaders(new OverrideHeaderOptions
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
-                ForwardedOptions = ForwardedHeaders.All
+                ForwardedHeaders = ForwardedHeaders.All
             });
             
             app.Run(context =>
