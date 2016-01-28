@@ -1,5 +1,5 @@
 using System.IO;
-using Microsoft.AspNet.Hosting;
+using Microsoft.AspNetCore.Hosting;
 
 namespace HelloWeb
 {
@@ -8,7 +8,7 @@ namespace HelloWeb
         public static void Main(string[] args)
         {            
             var host = new WebHostBuilder()
-                        .UseServer("Microsoft.AspNet.Server.Kestrel")
+                        .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                         .UseApplicationBasePath(Directory.GetCurrentDirectory())
                         .UseDefaultConfiguration(args)
                         .UseIISPlatformHandlerUrl()
