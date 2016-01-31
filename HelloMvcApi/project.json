@@ -1,0 +1,28 @@
+{
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+    "dependencies": {
+        "NETStandard.Library": "1.0.0-*",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+        "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+        "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
+        "Microsoft.AspNetCore.Mvc.Core": "1.0.0-*",
+        "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0-*",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+        "System.Runtime.Serialization.Primitives": "4.1.0-*",
+        "System.Xml.XDocument": "4.0.1-*",
+        "Microsoft.Extensions.DependencyModel": "1.0.0-dev-001186"
+    },
+    "frameworks": {
+        "dnxcore50": {
+            "imports": "portable-net45+win8"
+        }
+    },
+    "tools": {
+        "dotnet-publish-iis": "1.0.0-*"
+    },
+    "scripts": {
+        "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath%"
+    }
+}
