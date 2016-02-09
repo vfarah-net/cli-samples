@@ -11,8 +11,7 @@
         "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0-*",
         "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
         "System.Runtime.Serialization.Primitives": "4.1.0-*",
-        "System.Xml.XDocument": "4.0.1-*",
-        "Microsoft.Extensions.DependencyModel": "1.0.0-dev-001186"
+        "System.Xml.XDocument": "4.0.1-*"
     },
     "frameworks": {
         "dnxcore50": {
