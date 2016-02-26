@@ -25,10 +25,10 @@ namespace HelloMvcApi
 
             if (product == null)
             {
-                return new HttpNotFoundResult();
+                return new NotFoundResult();
             }
 
-            return new HttpOkObjectResult(product);
+            return new OkObjectResult(product);
         }
 
         [HttpPost]
