@@ -3,7 +3,6 @@
         "emitEntryPoint": true
     },
     "dependencies": {
-        "NETStandard.Library": "1.0.0-*",
         "Microsoft.Extensions.Logging.Console": "1.0.0-*",
         "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
         "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
@@ -14,9 +13,15 @@
         "System.Xml.XDocument": "4.0.1-*"
     },
     "frameworks": {
-        "dnxcore50": {
-            "imports": "portable-net45+win8"
-        }
+      "netstandardapp1.3": {
+        "dependencies": {
+          "NETStandard.Library": "1.0.0-*"
+        },
+        "imports": [
+          "dnxcore50",
+          "portable-net451+win8"
+        ]
+      }
     },
     "tools": {
         "dotnet-publish-iis": "1.0.0-*"
