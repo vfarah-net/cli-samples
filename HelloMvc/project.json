@@ -21,7 +21,8 @@
     "frameworks": {
         "dnxcore50": { 
             "imports": "portable-net45+win8"
-        }
+        },
+        "dnx451": {}
     },
     "tools": {
       "dotnet-publish-iis": "1.0.0-*"
