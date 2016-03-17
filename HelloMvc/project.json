@@ -7,6 +7,7 @@
         "preserveCompilationContext": true,
         "emitEntryPoint": true
     },
+
     "dependencies" : {
         "Microsoft.Extensions.Logging.Console": "1.0.0-*",
         "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
@@ -18,9 +19,9 @@
         "System.Runtime.Serialization.Primitives": "4.1.0-*"
     },
     "frameworks": {
-      "netstandardapp1.3": {
+      "netcoreapp1.0": {
         "dependencies": {
-          "NETStandard.Library": "1.0.0-*"
+          "Microsoft.NETCore.App": "1.0.0-rc2-23914"
         },
         "imports": [
           "dnxcore50",
