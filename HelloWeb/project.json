@@ -4,15 +4,15 @@
   },
 
   "dependencies" : {
+    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*"
   },
 
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
-        "Microsoft.NETCore.App": "1.0.0-rc2-23914",
-        "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
-        "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*"
+        "Microsoft.NETCore.App": { "version": "1.0.0-rc2-23914", "type": "platform" }
       },
       "imports": [
         "dnxcore50",
