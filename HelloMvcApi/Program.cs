@@ -11,7 +11,7 @@ namespace HelloMvcApi
             var host = new WebHostBuilder()
                         .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                         .UseContentRoot(Directory.GetCurrentDirectory())
-                        .UseDefaultConfiguration(args)
+                        .UseDefaultHostingConfiguration(args)
                         .UseIISPlatformHandlerUrl()
                         .UseStartup<Startup>()
                         .Build();
