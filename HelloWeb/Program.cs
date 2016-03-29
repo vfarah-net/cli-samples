@@ -11,7 +11,7 @@ namespace HelloWeb
                         .UseServer("Microsoft.AspNetCore.Server.Kestrel")
                         .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseDefaultHostingConfiguration(args)
-                        .UseIISPlatformHandlerUrl()
+                        .UseIIS()
                         .UseStartup<Startup>()
                         .Build();
 
