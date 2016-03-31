@@ -9,17 +9,19 @@
         "Microsoft.AspNetCore.Mvc.Core": "1.0.0-*",
         "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0-*",
         "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
-        "System.Runtime.Serialization.Primitives": "4.1.0-*",
+        "System.Runtime.Serialization.Primitives": "4.1.1-*",
         "System.Xml.XDocument": "4.0.1-*"
     },
     "frameworks": {
-      "netstandardapp1.3": {
+      "netstandard1.5": {
         "dependencies": {
-          "NETStandard.Library": "1.0.0-*"
+          "Microsoft.NETCore.App": {
+              "type": "platform",
+              "version": "1.0.0-rc2-23930"
+          },
         },
         "imports": [
-          "dnxcore50",
-          "portable-net451+win8"
+          "portable-net45+wp80+win8+wpa81+dnxcore50"
         ]
       }
     },

@@ -10,12 +10,15 @@
   },
 
   "frameworks": {
-    "netstandardapp1.3": {
+    "netstandard1.5": {
       "dependencies": {
-        "NETStandard.Library": "1.0.0-*"
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0-rc2-23930"
+        },
       },
       "imports": [
-        "dnxcore50"
+        "portable-net45+wp80+win8+wpa81+dnxcore50"
       ]
     }
   }
