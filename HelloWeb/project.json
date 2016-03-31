@@ -10,9 +10,9 @@
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
+    "netstandard1.5": {
       "dependencies": {
-        "Microsoft.NETCore.App": { "version": "1.0.0-rc2-23914", "type": "platform" }
+        "Microsoft.NETCore.App": { "version": "1.0.0-rc2-23930", "type": "platform" }
       },
       "imports": [
         "dnxcore50",
