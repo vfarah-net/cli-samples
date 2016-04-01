@@ -8,7 +8,7 @@ namespace HelloWeb
         public static void Main(string[] args)
         {            
             var host = new WebHostBuilder()
-                        .UseServer("Microsoft.AspNetCore.Server.Kestrel")
+                        .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseDefaultHostingConfiguration(args)
                         .UseIISPlatformHandlerUrl()
