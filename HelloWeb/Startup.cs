@@ -9,12 +9,6 @@ namespace HelloWeb
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.UseIISPlatformHandler();
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.All
-            });
-            
             app.Run(context =>
             {
                 return context.Response.WriteAsync("Hello World!");

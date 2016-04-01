@@ -13,8 +13,7 @@
             "version": "1.0.0-rc2-23931"
         },
         "Microsoft.Extensions.Logging.Console": "1.0.0-*",
-        "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
-        "Microsoft.AspNetCore.HttpOverrides": "1.0.0-*",
+        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-*",
         "Microsoft.AspNetCore.Mvc": "1.0.0-*",
         "Microsoft.AspNetCore.StaticFiles": "1.0.0-*",
         "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",

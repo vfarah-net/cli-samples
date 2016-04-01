@@ -17,12 +17,6 @@ namespace HelloMvc
         {
             loggerFactory.AddConsole(LogLevel.Debug);
 
-            app.UseIISPlatformHandler();
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.All
-            });
-
             app.UseStaticFiles();
 
             if (env.IsDevelopment())

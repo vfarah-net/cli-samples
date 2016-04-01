@@ -12,7 +12,7 @@ namespace HelloMvcApi
                         .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseDefaultHostingConfiguration(args)
-                        .UseIISPlatformHandlerUrl()
+                        .UseIIS()
                         .UseStartup<Startup>()
                         .Build();
 
