@@ -11,7 +11,7 @@ namespace HelloWeb
                         .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseDefaultHostingConfiguration(args)
-                        .UseIIS()
+                        .UseIISIntegration()
                         .UseStartup<Startup>()
                         .Build();
 
