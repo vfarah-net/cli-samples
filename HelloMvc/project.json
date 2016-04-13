@@ -6,7 +6,8 @@
   ],
   "compilationOptions": {
     "preserveCompilationContext": true,
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "debugType": "portable"
   },
   "dependencies" : {
     "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
