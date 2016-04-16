@@ -11,9 +11,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-*",
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0-rc2-23931"
-    },
-    "System.Runtime.Serialization.Primitives": "4.1.1-*"
+      "version": "1.0.0-*"
+    }
   },
   "frameworks": {
     "netcoreapp1.0": {
