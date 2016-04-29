@@ -1,6 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 
 namespace HelloMvcApi
 {
@@ -8,10 +9,14 @@ namespace HelloMvcApi
     {
         public static void Main(string[] args)
         {
+            var config = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .Build();
+
             var host = new WebHostBuilder()
                         .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())
-                        .UseDefaultHostingConfiguration(args)
+                        .UseConfiguration(config)
                         .UseIISIntegration()
                         .UseStartup<Startup>()
                         .Build();
