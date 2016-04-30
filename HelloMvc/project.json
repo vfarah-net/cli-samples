@@ -1,14 +1,16 @@
 {
-  "content": [
-    "wwwroot",
-    "Views"
-  ],
-  "compilationOptions": {
+  "buildOptions": {
     "preserveCompilationContext": true,
     "emitEntryPoint": true,
     "debugType": "portable"
   },
-  "dependencies" : {
+  "publishOptions": {
+    "include": [
+      "wwwroot",
+      "Views"
+    ]
+  },
+  "dependencies": {
     "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc": "1.0.0-*",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-*",
