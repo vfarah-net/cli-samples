@@ -8,6 +8,8 @@ namespace HelloMvc
     {
         public static void Main(string[] args)
         {
+            var s = MyNamespace.Class.GetString();
+
             var host = new WebHostBuilder()
                         .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())

@@ -1,0 +1,15 @@
+{
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "frameworks": {
+    "netstandard1.5": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-*"
+        }
+      }
+    },
+    "net451": {}
+  }
+}
