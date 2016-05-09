@@ -1,6 +1,9 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.CommandLine;
+
 
 namespace HelloMvc
 {
@@ -8,9 +11,10 @@ namespace HelloMvc
     {
         public static void Main(string[] args)
         {
-            var s = MyNamespace.Class.GetString();
+            var config = new ConfigurationBuilder().AddCommandLine(args).Build();
 
             var host = new WebHostBuilder()
+                        .UseConfiguration(config)
                         .UseKestrel()
                         .UseContentRoot(Directory.GetCurrentDirectory())
                         .UseIISIntegration()
