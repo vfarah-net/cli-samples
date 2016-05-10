@@ -2,6 +2,7 @@
   "buildOptions": {
     "preserveCompilationContext": true,
     "emitEntryPoint": true,
+    // "platform": "x64",
     "debugType": "portable"
   },
   "publishOptions": {
@@ -39,6 +40,11 @@
       }
     },
     "net46": {
+      "dependencies": {
+        "Microsoft.NETCore.Platforms" : "1.0.1-*"
+      }
+    },
+    "net461": {
       "dependencies": {
         "Microsoft.NETCore.Platforms" : "1.0.1-*"
       }
