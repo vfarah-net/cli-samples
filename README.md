@@ -5,7 +5,7 @@ The projects in this repository show working examples using the dotnet CLI and A
 
 ## How to run
 
-1. Get the dotnet CLI https://github.com/dotnet/cli#installers-and-binaries
+1. Get the .NET Core SDK http://dot.net
 2. Clone this repo
 3. run `dotnet restore` in the root folder
 4. Navigate to either `HelloMvc` or `HelloWeb` and run `dotnet run`
