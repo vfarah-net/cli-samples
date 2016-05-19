@@ -4,16 +4,16 @@
     "debugType": "portable"
   },
   "dependencies" : {
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-*",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
-    "Microsoft.NETCore.Platforms": "1.0.1-*"
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
+    "Microsoft.NETCore.Platforms": "1.0.1-rc2-24027"
   },
   "frameworks": {
     "net451": { }
   },
   "tools": {
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-      "version": "1.0.0-*",
+      "version": "1.0.0-preview1-final",
       "imports": "portable-net45+wp80+win8+wpa81+dnxcore50"
     }
   },
